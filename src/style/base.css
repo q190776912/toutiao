@@ -1,0 +1,72 @@
+/* 初始化代码 */
+body,
+div,
+span,
+img,
+input,
+a,
+p,
+strong,
+em,
+ins,
+del,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+i {
+    /* 把会用到的标签都写进来 */
+    /* 边边角角,没有意义的地方,一半会用到 i标签 */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;/* 去掉列表前面的圈 */
+}
+
+input {
+    border: none;
+    outline: none;
+    /* outline:
+        位于元素边框的外围,可起到突出元素的作用
+        outline-color; outline-style; outline-width;    
+    */
+}
+
+img {
+    border: none; 
+    /* 低版本浏览器图片标签自带边框, 此条是为了兼容低版本浏览器 */
+    vertical-align: middle;
+    /* 控制行内块元素与文字中线对齐 */
+}
+
+i {
+    font-style: normal;/* 用来放奇怪的东西,所以要把字体改一下 */
+}
+
+body {
+    font-size: 12px;/* 更改默认字体 */
+    line-height: 1;
+    background: #f5f7f9;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
